@@ -17,7 +17,7 @@ Sistema de perguntas e respostas inspirado no StackOverflow, desenvolvido como t
 
 ## Vídeo de demonstração
 
-> 📹 **Vídeo de Demonstração (YouTube):** _(link a ser adicionado)_
+> [📹 **Vídeo de Demonstração (YouTube)**:](https://youtu.be/E1SLbqBhpVQ)
 
 ---
 
@@ -358,225 +358,41 @@ Telas copiadas de uma execução real sobre a base do `PovoarDados` (usuário `a
 
 **1. Menu de busca e prompt de termos**
 
-```
-============================
-      AJUDA AÍ 1.0
-============================
-> Início > Buscar perguntas
-(A) Perguntas mais recentes
-(B) Busca por palavras-chave
-(R) Retornar
-Opção: B
-
-============================
-      AJUDA AÍ 1.0
-============================
-> Início > Buscar perguntas > Busca por palavras-chave
-Digite uma ou mais palavras (ENTER vazio para retornar).
-Termos de busca: índice em disco
-```
+![Imagem](docs/screenshots/image1.png)
 
 **2. Resultados classificados por TF×IDF** (acento removido, `em` descartado como _stop word_)
 
-```
-============================
-      AJUDA AÍ 1.0
-============================
-> Início > Buscar perguntas > Busca por palavras-chave
-Busca: "índice em disco"
-Termos considerados: indice, disco
-Página 1 de 1 (Total de perguntas encontradas: 4)
-
-(1) Como funciona o Hash Extensivel em AEDS 3?
-    Palavras-chave: hash extensivel;hash;indice;disco
-    Relevância (TF x IDF): 0,244
-    Criada por Arthur em 07/11/2026 às 15:20
-
-(2) Como montar um indice invertido com TF-IDF?
-    Palavras-chave: indice invertido;tf-idf;busca;indice
-    Relevância (TF x IDF): 0,174
-    Criada por Arthur em 07/11/2026 às 15:20
-
-(3) Como calcular o custo de I/O em arquivos binarios?
-    Palavras-chave: desempenho;disco;entrada e saida;arquivo
-    Relevância (TF x IDF): 0,140
-    Criada por Rafael em 07/11/2026 às 15:20
-
-(4) Qual a diferenca entre Arvore B e Arvore B+?
-    Palavras-chave: arvore b+;arvore;indice
-    Relevância (TF x IDF): 0,131
-    Criada por Rafael em 07/11/2026 às 15:20
-
-(A) Página anterior
-(B) Próxima página
-(N) Nova busca
-(R) Retornar
-Ou digite o número da pergunta para abrir detalhes.
-Opção: 1
-```
+![Imagem](docs/screenshots/image2.png)
 
 **3. Pergunta aberta a partir da busca** (respostas por nota, responder e avaliar como no TP2)
 
-```
-============================
-      AJUDA AÍ 1.0
-============================
-> Início > Buscar perguntas > Busca por palavras-chave > Pergunta
-
-Como funciona o Hash Extensivel em AEDS 3?
-Palavras-chave: hash extensivel;hash;indice;disco
-Criada por Arthur em 07/11/2026 às 15:20
-
-RESPOSTAS
----------
-(1) O Hash Extensivel usa um diretorio em memoria/disco que aponta para cestos.
-Respondido por Rafael em 07/11/2026 às 15:20
-Nota: 1  (1 avaliações)
-
-(2) Resposta redundante que pode ser moderada pelo autor.
-Respondido por Rafael em 07/11/2026 às 15:20
-Nota: 0  (0 avaliações)
-
-(A) Responder à pergunta
-(R) Retornar
-Ou digite o número da resposta para interagir.
-Opção: R
-```
+![Imagem](docs/screenshots/image3.png)
 
 **4. Paginação dos resultados** (termo comum `arquivo`: 6 perguntas, 2 páginas, empates resolvidos pela data)
 
-```
-> Início > Buscar perguntas > Busca por palavras-chave
-Busca: "arquivo"
-Termos considerados: arquivo
-Página 1 de 2 (Total de perguntas encontradas: 6)
-
-(1) Como funciona a compactacao de um arquivo com Huffman?
-    Palavras-chave: compressao;huffman;arquivo;bits
-    Relevância (TF x IDF): 0,055
-    Criada por Rafael em 07/11/2026 às 15:20
-
-(2) Como abrir um arquivo binario em Java com RandomAccessFile?
-    Palavras-chave: java;arquivo;randomaccessfile;leitura
-    Relevância (TF x IDF): 0,055
-    Criada por Rafael em 07/11/2026 às 15:20
-
-(3) Melhores praticas para serializacao binaria em Java?
-    Palavras-chave: java;serializacao;bytes;arquivo
-    Relevância (TF x IDF): 0,055
-    Criada por Arthur em 07/11/2026 às 15:20
-
-(4) O que e a lista de registros excluidos (primeiroLivre)?
-    Palavras-chave: crud;exclusao;arquivo;registro
-    Relevância (TF x IDF): 0,055
-    Criada por Arthur em 07/11/2026 às 15:20
-
-(5) Qual a melhor forma de ordenar um arquivo grande que nao cabe em memoria?
-    Palavras-chave: ordenacao externa;arquivo;memoria;intercalacao
-    Relevância (TF x IDF): 0,044
-    Criada por Arthur em 07/11/2026 às 15:20
-
-(A) Página anterior
-(B) Próxima página
-(N) Nova busca
-(R) Retornar
-Ou digite o número da pergunta para abrir detalhes.
-Opção: B
-
-> Início > Buscar perguntas > Busca por palavras-chave
-Busca: "arquivo"
-Termos considerados: arquivo
-Página 2 de 2 (Total de perguntas encontradas: 6)
-
-(1) Como calcular o custo de I/O em arquivos binarios?
-    Palavras-chave: desempenho;disco;entrada e saida;arquivo
-    Relevância (TF x IDF): 0,044
-    Criada por Rafael em 07/11/2026 às 15:20
-```
+![Imagem](docs/screenshots/image4.png)
 
 **5. Stop words na consulta** (`"a pergunta sobre o hash"` → apenas `hash`)
 
-```
-> Início > Buscar perguntas > Busca por palavras-chave
-Busca: "a pergunta sobre o hash"
-Termos considerados: hash
-Página 1 de 1 (Total de perguntas encontradas: 1)
-
-(1) Como funciona o Hash Extensivel em AEDS 3?
-    Palavras-chave: hash extensivel;hash;indice;disco
-    Relevância (TF x IDF): 0,400
-    Criada por Arthur em 07/11/2026 às 15:20
-```
+![Imagem](docs/screenshots/image5.png)
 
 **6. Alteração das palavras-chave atualiza o índice**
 
-```
-> Início > Minha área > Minhas perguntas > Pergunta
-
-07/11/2026 15:20
-Como funciona o Hash Extensivel em AEDS 3?
-Palavras chave: hash extensivel;hash;indice;disco
-...
-(A) Alterar dados da pergunta
-(B) Arquivar pergunta
-(R) Retornar
-Opção: A
-Novo texto (ENTER para manter):
-Novas palavras-chave (ENTER para manter): hash extensivel;cestos;diretorio
-Pergunta alterada com sucesso.
-```
+![Imagem](docs/screenshots/image6.png)
 
 Repetindo a busca `"índice em disco"`, a pergunta 1 não aparece mais e as relevâncias das demais mudam, pois os IDFs foram recalculados (`indice` agora está em 2 das 10 perguntas → `log10(5) = 0,699`; `disco` em 1 → `log10(10) = 1`):
 
-```
-Busca: "índice em disco"
-Termos considerados: indice, disco
-Página 1 de 1 (Total de perguntas encontradas: 3)
-
-(1) Como montar um indice invertido com TF-IDF?
-    Palavras-chave: indice invertido;tf-idf;busca;indice
-    Relevância (TF x IDF): 0,233
-    Criada por Arthur em 07/11/2026 às 15:20
-
-(2) Como calcular o custo de I/O em arquivos binarios?
-    Palavras-chave: desempenho;disco;entrada e saida;arquivo
-    Relevância (TF x IDF): 0,200
-    Criada por Rafael em 07/11/2026 às 15:20
-
-(3) Qual a diferenca entre Arvore B e Arvore B+?
-    Palavras-chave: arvore b+;arvore;indice
-    Relevância (TF x IDF): 0,175
-    Criada por Rafael em 07/11/2026 às 15:20
-```
+![Imagem](docs/screenshots/image6a.png)
 
 E o novo termo já é encontrado:
 
-```
-Busca: "cestos"
-Termos considerados: cestos
-Página 1 de 1 (Total de perguntas encontradas: 1)
-
-(1) Como funciona o Hash Extensivel em AEDS 3?
-    Palavras-chave: hash extensivel;cestos;diretorio
-    Relevância (TF x IDF): 0,250
-    Criada por Arthur em 07/11/2026 às 15:20
-```
+![Imagem](docs/screenshots/image6b.png)
 
 **7. Arquivamento remove a pergunta do índice**
 
-```
-> Início > Minha área > Minhas perguntas > Pergunta
-...
-Opção: B
-Confirma arquivamento definitivo da pergunta? (S/N): S
-Pergunta arquivada.
+![Imagem](docs/screenshots/image7.png)
 
-> Início > Buscar perguntas > Busca por palavras-chave
-Digite uma ou mais palavras (ENTER vazio para retornar).
-Termos de busca: cestos
-Termos considerados: cestos
-Nenhuma pergunta encontrada para os termos informados.
-```
+![Imagem](docs/screenshots/image7a.png)
 
 ---
 
@@ -605,3 +421,7 @@ Nenhuma pergunta encontrada para os termos informados.
 **6. O trabalho é original e não a cópia de um trabalho de outro grupo?**
 
 > **Sim.** O código foi desenvolvido pelos membros do grupo a partir do nosso TP2, usando apenas as estruturas de dados disponibilizadas na disciplina (`Arquivo`, `HashExtensivel`, `ArvoreBMais`, `ListaInvertida`).
+
+```
+
+```
